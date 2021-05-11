@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Ubuntu&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--
+        <i class="fas fa-trash-alt"></i>
+        <i class="far fa-plus-square"></i>
+        <i class="fas fa-edit"></i>
+    -->
+    <div class="container">
+        <div class="app-title">
+            <a href=""><b>Budget</b> App</a>
+        </div>
+        <div class="budget-header">
+            <div class="balance">
+                <div class="title">
+                    Balance
+                </div>
+                <div class="value">
+                    <small>$</small>0
+                </div>
+            </div>
+            <div class="account">
+                <div class="income-container">
+                    <div class="income">
+                        Income
+                    </div>
+                    <div class="income-total">
+                        <small>$</small>0
+                    </div>
+                </div>
+                <div class="chart"></div>
+                <div class="outcome-container">
+                    <div class="outcome">
+                        Outcome
+                    </div>
+                    <div class="outcome-total">
+                        <small>$</small>0
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="budget-dashboard">
+            <div class="dash-title"><b>Dashboard</b></div>
+            <div class="toggle">
+                <div class="tab1"><b>Incomes</b></div>
+                <div class="tab2"><b>Expenses</b></div>
+                <div class="tab3 active"><b>All</b></div>
+            </div>
+            <div class="hide" id="income">
+                <ul class="list"></ul>
+                <div class="input">
+                    <input type="text" name="title" placeholder="Title" id="income-title-input">
+                    <input type="number" name="amount" placeholder="Amount" id="income-amount-input">
+                    <div class="add-income">
+                        <button id="add-income-button">
+                            <i class="far fa-plus-square"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="hide" id="expense">
+                <ul class="list"></ul>
+                <div class="input">
+                    <input type="text" name="title" placeholder="Title" id="expense-title-input">
+                    <input type="number" name="amount" placeholder="Amount" id="expense-amount-input">
+                    <div class="add-expense">
+                        <button id="add-expense-button">
+                            <i class="far fa-plus-square"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div id="all"></div>
+        </div>
+    </div>
+
+    <script src="chart.js"></script>
+    <script src="budget.js"></script>
+</body>
+</html>
