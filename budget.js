@@ -53,7 +53,7 @@ allBtn.addEventListener("click", () => {
     show( allEl )
     hide( [incomeEl, outcomeEl] )
     active( allBtn )
-    inactive( [incomeBtn, outcomeBtn] )
+    inactive( [incomeBtn, expenseBtn] )
 })
 
 // HELPERS
