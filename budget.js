@@ -5,7 +5,7 @@ const incomeTotalEl = document.querySelector(".income-total")
 const outcomeTotalEl = document.querySelector(".outcome-total")
 const incomeEl = document.querySelector("#income")
 const outcomeEl = document.querySelector("#expense")
-const allEl = document.querySelector("all")
+const allEl = document.querySelector("#all")
 const incomeList = document.querySelector("#income .list")
 const expenseList = document.querySelector("#outcome .list")
 const allList = document.querySelector("#all .list")
@@ -58,18 +58,23 @@ allBtn.addEventListener("click", () => {
 
 // HELPERS
 
-function show(el){
-
+function show(elToBeShown){
+    elToBeShown.classList.remove("hide")
 }
 
-function hide(elements){
-
+function hide(elsToBeHidden){
+    elsToBeHidden.forEach(el => {
+        el.classList.add("hide")
+    })
 }
 
-function active(el){
-
+function active(elToBeActivated){
+    elToBeActivated.classList.add("active")
 }
 
-function inactive(elements){
-
+function inactive(elsToBeInactivated){
+    elsToBeInactivated.forEach(el => {
+        el.classList.remove("active")
+    })
 }
+
